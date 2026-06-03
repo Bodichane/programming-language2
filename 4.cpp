@@ -155,7 +155,7 @@ vector<Point> addPointVectors(vector<Point> a, const vector<Point>& b) {
 vector<Point> addPointConstant(vector<Point> v, Point d) {
     transform(v.begin(), v.end(), v.begin(),
         [d](Point p) {
-            return {p.x + d.x, p.y + d.y, p.s};
+            return Point{p.x + d.x, p.y + d.y, p.s}; 
         });
     return v;
 }
