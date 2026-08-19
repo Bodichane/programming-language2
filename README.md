@@ -1,41 +1,41 @@
-# Exercices STL en C++
+# C++ STL exercises
 
-Recueil d'exercices de deuxième année portant sur la **bibliothèque standard
-C++ (STL)** : algorithmes, itérateurs, conteneurs séquentiels et associatifs.
-Chaque fichier regroupe les exercices d'un laboratoire (commentaires en russe).
+A collection of second-year exercises about the **C++ Standard Template Library
+(STL)**: algorithms, iterators, sequence and associative containers. Each file
+groups the exercises of one lab (comments in Russian).
 
-## Contenu
+## Contents
 
-| Fichier | Thème | Notions couvertes |
+| File | Topic | Concepts covered |
 |---|---|---|
-| `lab1_sequential_algorithms.cpp` | Algorithmes et itérateurs | `count`, `count_if`, `copy`, `remove_copy`, `replace_copy`, `transform`, `merge`, `generate_n`, itérateurs de flux (`istream_iterator`, `ostream_iterator`) sur tableaux et fichiers |
-| `lab2_sequence_containers.cpp` | Conteneurs séquentiels | `vector`, `list`, `deque` : parcours direct/inverse, insertion, découpage en moitiés/tiers, itérateurs inverses |
-| `lab3_associative_containers.cpp` | Conteneurs associatifs | `set`, `map` : insertion, recherche, agrégation |
-| `lab4_sorting_and_structs.cpp` | Tri et types utilisateur | tri avec comparateurs personnalisés, structure `Point` surchargeant `operator<` et `operator+` |
+| `lab1_sequential_algorithms.cpp` | Algorithms and iterators | `count`, `count_if`, `copy`, `remove_copy`, `replace_copy`, `transform`, `merge`, `generate_n`, stream iterators (`istream_iterator`, `ostream_iterator`) over arrays and files |
+| `lab2_sequence_containers.cpp` | Sequence containers | `vector`, `list`, `deque`: forward/reverse traversal, insertion, splitting into halves/thirds, reverse iterators |
+| `lab3_associative_containers.cpp` | Associative containers | `set`, `map`: insertion, lookup, aggregation |
+| `lab4_sorting_and_structs.cpp` | Sorting and user types | sorting with custom comparators, a `Point` struct overloading `operator<` and `operator+` |
 
-## Nature du code
+## Nature of the code
 
-Chaque fichier est une **collection de fonctions** illustrant une notion — il
-n'y a volontairement pas de `main()` : les fonctions sont destinées à être lues,
-réutilisées ou appelées depuis un programme de test. Elles constituent donc des
-unités de compilation autonomes, pas des exécutables.
+Each file is a **collection of functions** illustrating a concept — there is
+intentionally no `main()`: the functions are meant to be read, reused or called
+from a test program. They are therefore standalone translation units, not
+executables.
 
 ## Compilation
 
-Les fichiers se compilent en modules objets (aucun point d'entrée `main`) :
+The files compile to object modules (no `main` entry point):
 
 ```bash
 g++ -c -std=c++17 -Wall lab1_sequential_algorithms.cpp
 ```
 
-Pour exécuter une fonction précise, écrivez un petit `main()` qui l'appelle,
-puis liez-le au module correspondant :
+To run a specific function, write a small `main()` that calls it, then link it
+with the corresponding module:
 
 ```bash
-g++ -std=c++17 votre_test.cpp lab1_sequential_algorithms.cpp -o test && ./test
+g++ -std=c++17 your_test.cpp lab1_sequential_algorithms.cpp -o test && ./test
 ```
 
-## État de compilation
+## Build status
 
-Les quatre fichiers compilent en objets **sans aucun avertissement** avec
-`g++ -std=c++17 -Wall`, vérifié fichier par fichier.
+All four files compile to objects **without any warning** with
+`g++ -std=c++17 -Wall`, verified file by file.
